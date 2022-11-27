@@ -8,8 +8,9 @@
  * @format
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
+import SplashScreen from "react-native-splash-screen";
 
 import AppNavigator from "./src/navigation/Navigator";
 import { CheckNetwork } from './src/components';
@@ -17,6 +18,10 @@ import { CheckNetwork } from './src/components';
 const App = () => {
 
   const [isNetwork, setNetwork] = useState(false);
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
