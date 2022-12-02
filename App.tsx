@@ -10,14 +10,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import SplashScreen from "react-native-splash-screen";
+import SplashScreen from 'react-native-splash-screen';
 
-import AppNavigator from "./src/navigation/Navigator";
+import AppNavigator from './src/navigation/Navigator';
 import { CheckNetwork } from './src/components';
 
 const App = () => {
 
-  const [isNetwork, setNetwork] = useState(false);
+  const [isNetwork, setNetwork] = useState(true);
 
   useEffect(() => {
     SplashScreen.hide();

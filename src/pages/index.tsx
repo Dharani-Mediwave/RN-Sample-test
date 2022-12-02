@@ -1,7 +1,9 @@
-import { HomeScreen } from "./HomeScreen";
-import { DetailsScreen } from "./DetailsScreen";
+import { HomeScreen } from './HomeScreen';
+import { DetailsScreen } from './DetailsScreen';
+import { SignUp } from './SignUp';
 
 export {
-    HomeScreen,
-    DetailsScreen
-}
+  HomeScreen,
+  DetailsScreen,
+  SignUp
+};

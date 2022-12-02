@@ -4,16 +4,18 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 interface CustomButtonProps {
   name: string;
   handleButton: any;
+  bgColor: string;
+  btnTextColor: string
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = ({ name, handleButton }) => {
+export const CustomButton: React.FC<CustomButtonProps> = ({ name, handleButton, bgColor, btnTextColor }) => {
   return (
     <>
       <TouchableOpacity
         onPress={handleButton}
-        style={styles.btnContainer}
+        style={[styles.btnContainer, { backgroundColor: bgColor }]}
         activeOpacity={0.7}>
-        <Text style={styles.btnText}>{name}</Text>
+        <Text style={[styles.btnText, { color: btnTextColor }]}>{name}</Text>
       </TouchableOpacity>
     </>
   );
@@ -21,7 +23,6 @@ export const CustomButton: React.FC<CustomButtonProps> = ({ name, handleButton }
 
 const styles = StyleSheet.create({
   btnContainer: {
-    backgroundColor: "#009688",
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 12
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000'
+    justifyContent: 'center',
+    textAlign: 'center'
   }
-})
+});
